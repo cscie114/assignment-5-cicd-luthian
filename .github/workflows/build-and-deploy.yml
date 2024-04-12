@@ -28,3 +28,6 @@ jobs:
       - run: npm run eslint
       - run: echo "Building project..."
       - run: npm run build --if-present
+        env:
+          MOVIE_API_KEY: ${{ secrets.MOVIE_API_KEY }}
+          MOVIE_ID: ${{ secrets.MOVIE_ID }}
