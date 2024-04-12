@@ -1,0 +1,51 @@
+/* Add your CSS to this file. */
+html {
+  margin: 2rem 0 0 0;
+  background-color: #555;
+  font-size: 16.5px;
+  color: white;
+  font-family: sans-serif;
+}
+h1,h2 {
+  text-align: center;
+}
+h1 {
+  font-size: 3rem;
+}
+section {
+  color: black;
+}
+footer {
+  text-align: center;
+  margin: 1rem;}
+li {
+  font-size: 1.1rem;
+  list-style-type: square;
+}
+.two-column {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.two-column > section {
+  background-color: white;
+  border-radius: 1rem;
+  width: 45%;
+  padding: 1rem;
+}
+ul {
+  margin: 0;
+}
+@media (max-width: 1023px) {
+  .two-column {
+    flex-direction: column;
+  }
+  .two-column > section {
+    width: auto;
+    margin-bottom: 1rem;
+  }
+  .two-column ul {
+    margin-top: 0.5rem;
+  }
+}
