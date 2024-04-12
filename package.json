@@ -4,16 +4,24 @@
   "description": "Assignment 5 for CSCI E-114, Spring 2024.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "eslint -ext .js, .html .",
     "build": "eleventy",
     "start": "eleventy --serve"
   },
   "author": "Michael D. Hilborn",
   "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "dotenv": "^16.3.2"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "axios": "^1.6.5",
-    "dotenv": "^16.3.2",
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^9.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "globals": "^15.0.0",
     "node-fetch": "^3.3.2"
   }
 }
