@@ -1,0 +1,30 @@
+{
+  "name": "cscie-114_assignment-5",
+  "version": "1.0.0",
+  "description": "Assignment 5 for CSCI E-114, Spring 2024.",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint ./src/**/*.js",
+    "test": "npm run test:unit",
+    "test:unit": "jest",
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "author": "David D'Antonio derived from template by Michael D. Hilborn",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "dotenv": "^16.3.2",
+    "jest": "^29.7.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^9.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "globals": "^15.0.0",
+    "node-fetch": "^3.3.2"
+  }
+}
