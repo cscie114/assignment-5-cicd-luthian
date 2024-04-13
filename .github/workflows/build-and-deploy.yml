@@ -26,6 +26,8 @@ jobs:
       - run: npm ci
       - run: echo "Linting project..."
       - run: npm run eslint
+      - run: echo "Testing project..."
+      - run: npm run test
       - run: echo "Building project..."
       - run: npm run build --if-present
         env:
