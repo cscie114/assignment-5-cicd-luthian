@@ -14,7 +14,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "Checking out project..."
+      - run: echo "A ${{ github.event_name}} triggered this run..."
+      - run: echo "Checking out project from ${{ github.ref_name }}..."
       - uses: actions/checkout@v4
       - run: echo "Installing Node.js 20..."
       - name: Use Node.js 20
