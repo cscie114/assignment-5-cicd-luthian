@@ -23,7 +23,7 @@ layout: 'layouts/base.html'
         <div class="chunk">weather info goes here</div>
         <div class="chunk">
           {% edge %}
-          Your location is {{ state.geolocation.data.city }}, {{ state.geolocation.data.subdivision.code }}
+          Your location is {{ geo.city }}, {{ geo.subdivision.code }}
           {% endedge %}
         </div>
       </div>
