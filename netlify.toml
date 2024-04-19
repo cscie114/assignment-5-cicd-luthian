@@ -7,5 +7,5 @@ command = "npx @11ty/eleventy --input=src"
 publish = "dist"
 
 [[edge_functions]]
-function = "get-dynamic-data"
+function = "eleventy-edge"
 path = "/"
