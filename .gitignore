@@ -6,3 +6,4 @@ etc
 .netlify/
 # Eleventy Edge Build Data files
 netlify/edge-functions/_generated
+/.vscode
