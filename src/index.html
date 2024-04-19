@@ -19,14 +19,18 @@ layout: 'layouts/base.html'
         <li>I've driven cars with four different engine types.</li>
       </ul>
       <hr />
-      <div class="two-column">
-        <div class="chunk">weather info goes here</div>
+      <div>
+        {% edge "liquid" %}
+        <h3>Your location is {{ geo.city }}, {{ geo.subdivision.code }}</h3>
         <div class="chunk">
-          {% edge "liquid" %}
-          Your location is {{ geo.city }}, {{ geo.subdivision.code }}
-          {% endedge %}
+          <h4 class="title">
+            A photo from {{ photo.rover.name }}'s {{ photo.camera.full_name}} on Mars on sol {{ photo.sol }}
+          </h4>
+          <div class="subtitle">Earth date {{ photo.earth_date}}, this day in 2021</div>
+          <img class="pix" src="{{ photo.img_src}}" alt="Photo of Mars" />
         </div>
       </div>
+      {% endedge %}
     </section>
     <section id="myMovie">
       <h3>Here's some information about one of my favorite movies:</h3>
