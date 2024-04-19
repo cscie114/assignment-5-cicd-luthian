@@ -18,6 +18,18 @@ layout: 'layouts/base.html'
         <li>My license plate is CSS. HTML was taken. :-(</li>
         <li>I've driven cars with four different engine types.</li>
       </ul>
+      <hr />
+      <div class="two-column">
+        <div class="chunk">weather info goes here</div>
+        <div class="chunk">
+          {% edge %} The content inside of the `edge` shortcode is generated on the Edge.
+
+          <pre>
+{{ geo | json }}
+          </pre>
+          {% endedge %}
+        </div>
+      </div>
     </section>
     <section id="myMovie">
       <h3>Here's some information about one of my favorite movies:</h3>
