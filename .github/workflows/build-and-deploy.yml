@@ -39,13 +39,14 @@ jobs:
         env:
           MOVIE_API_KEY: ${{ secrets.MOVIE_API_KEY }}
           MOVIE_ID: ${{ secrets.MOVIE_ID }}
+          NASA_API_KEY: ${{ secrets.NASA_API_KEY }}
 
       - run: echo "Deploying to Netlify..."
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v3.0
         with:
           publish-dir: './dist'
-          production-branch: main
+          production-branch: ${{ github.ref_name }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: 'Deploy from GitHub Actions'
           enable-pull-request-comment: false
