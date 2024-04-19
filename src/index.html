@@ -22,11 +22,8 @@ layout: 'layouts/base.html'
       <div class="two-column">
         <div class="chunk">weather info goes here</div>
         <div class="chunk">
-          {% edge %} The content inside of the `edge` shortcode is generated on the Edge.
-
-          <pre>
-{{ geo | json }}
-          </pre>
+          {% edge %}
+          Your location is {{ state.geolocation.data.city }}, {{ state.geolocation.data.subdivision.code }}
           {% endedge %}
         </div>
       </div>
