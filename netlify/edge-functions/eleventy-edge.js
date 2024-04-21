@@ -10,10 +10,12 @@ export default async (request, context) => {
     const year2021 = new Date()
     year2021.setFullYear(2021);
     const today = year2021.toISOString().split('T')[0]; // YYYY-MM-DD;
-    const params = new URLSearchParams({ earth_date: today, camera: 'FHAZ', api_key: process.env.NASA_API_KEY });
-    console.log('params', params.toString());
 
-    const resp = await axios.get('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos', { params });
+    const url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos';
+    const params = new URLSearchParams({ earth_date: today, camera: 'FHAZ', api_key: process.env.NASA_API_KEY });
+    console.log('url', url, 'params', params.toString());
+
+    const resp = await axios.get(url, { params });
     const onePhoto = resp.data.photos[0];
 
     let edge = new EleventyEdge('edge', {
