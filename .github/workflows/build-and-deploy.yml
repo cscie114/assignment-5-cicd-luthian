@@ -58,5 +58,7 @@ jobs:
       #   timeout-minutes: 1
       # - name: Link site to Netlify using CLI
       #   run: npx netlify link --id ${{ secrets.NETLIFY_SITE_ID }}
+      - name: Globall install Netlify CLI
+        run: npm install -g netlify-cli
       - name: Deploy to Netlify using CLI
-        run: npx netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --dir dist --prod
+        run: netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --dir dist --prod
