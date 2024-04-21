@@ -56,5 +56,7 @@ jobs:
       #     NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_ACCESS_TOKEN }}
       #     NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
       #   timeout-minutes: 1
+      - name: Link site to Netlify using CLI
+        run: npx netlify link --id ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --prod
       - name: Deploy to Netlify using CLI
-        run: npx netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --prod
+        run: npx netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }}
