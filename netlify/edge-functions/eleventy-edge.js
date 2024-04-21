@@ -7,16 +7,16 @@ export default async (request, context) => {
     // Get Mars Curiousity Rover image info for this day in 2021 ans save in global data
     // Since the rover stopped sending images, we will use the date to get the image
 
-    const year2021 = new Date()
-    year2021.setFullYear(2021);
-    const today = year2021.toISOString().split('T')[0]; // YYYY-MM-DD;
+    // const year2021 = new Date()
+    // year2021.setFullYear(2021);
+    // const today = year2021.toISOString().split('T')[0]; // YYYY-MM-DD;
 
-    const url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos';
-    const params = new URLSearchParams({ earth_date: today, camera: 'FHAZ', api_key: process.env.NASA_API_KEY });
-    console.log('url', url, 'params', params.toString());
+    // const url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos';
+    // const params = new URLSearchParams({ earth_date: today, camera: 'FHAZ', api_key: process.env.NASA_API_KEY });
+    // console.log('url', url, 'params', params.toString());
 
-    const resp = await axios.get(url, { params });
-    const onePhoto = resp.data.photos[0];
+    // const resp = await axios.get(url, { params });
+    // const onePhoto = resp.data.photos[0];
 
     let edge = new EleventyEdge('edge', {
       request,
@@ -32,7 +32,7 @@ export default async (request, context) => {
       eleventyConfig.addFilter('json', obj => JSON.stringify(obj, null, 2));
       // Make geo and photo data available globally
       eleventyConfig.addGlobalData('geo', context.geo);
-      eleventyConfig.addGlobalData('photo', onePhoto);
+      eleventyConfig.addGlobalData('photo', {});
     });
 
     // console.log(context.geo);
