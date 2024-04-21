@@ -11,9 +11,9 @@ export default async (request, context) => {
     year2021.setFullYear(2021);
     const today = year2021.toISOString().split('T')[0]; // YYYY-MM-DD;
 
-    // const url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos';
-    // const params = new URLSearchParams({ earth_date: today, camera: 'FHAZ', api_key: process.env.NASA_API_KEY });
-    // console.log('url', url, 'params', params.toString());
+    const url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos';
+    const params = new URLSearchParams({ earth_date: today, camera: 'FHAZ', api_key: process.env.NASA_API_KEY });
+    console.log('url', url, 'params', params.toString());
 
     // const resp = await axios.get(url, { params });
     // const onePhoto = resp.data.photos[0];
