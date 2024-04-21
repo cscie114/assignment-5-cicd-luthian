@@ -59,7 +59,7 @@ jobs:
       #     NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
       #   timeout-minutes: 1
       - name: Deploy to Netlify
-        uses: netlify/actions/cli@master
+        uses: South-Paw/action-netlify-cli@v2
         with:
           args: deploy --dir=dist --functions=edge-functions
         env:
