@@ -9,3 +9,10 @@ publish = "dist"
 [[edge_functions]]
 function = "eleventy-edge"
 path = "/"
+
+[[redirects]]
+from = "/"
+to = "/.netlify/functions/getNasaImage"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "getNasaImage"

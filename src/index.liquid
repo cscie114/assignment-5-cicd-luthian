@@ -1,6 +1,8 @@
 ---
 title: 'Hello, Netlify!'
 layout: 'layouts/base.html'
+permalink:
+  getNasaImage: /
 ---
 
 <header>
@@ -18,18 +20,21 @@ layout: 'layouts/base.html'
         <li>My license plate is CSS. HTML was taken.</li>
         <li>I've driven cars with four different engine types.</li>
       </ul>
-      <hr />
+      <hr/>
       <div>Regular
         {% edge "liquid" %}
-        <h3>Your location is {{ geo.city }}, {{ geo.subdivision.code }}</h3>
-        <div class="chunk">
-          <h4 class="title">
-            A photo from {{ photo.rover.name }}'s {{ photo.camera.full_name}} on Mars on sol {{ photo.sol }}
-          </h4>
-          <div class="subtitle">Earth date {{ photo.earth_date}}, this day in 2021</div>
-          <img class="pix" src="{{ photo.img_src}}" alt="Photo of Mars" />
+          <h3>Your location is {{ geo.city }}, {{ geo.subdivision.code }}</h3>
+          <div class="chunk">
+            <h4 class="title">
+              A photo from {{ photo.rover.name }}'s {{ photo.camera.full_name }} on Mars on sol {{ photo.sol }}
+            </h4>
+            <div class="subtitle">Earth date {{ photo.earth_date }}, this day in 2021</div>
+            <img
+              class="pix"
+              src="{{ photo.img_src}}"
+              alt="Photo of Mars" />
+          </div>
         </div>
-      </div>
       {% endedge %}
     </section>
     <section id="myMovie">
@@ -45,7 +50,7 @@ layout: 'layouts/base.html'
           </li>
           <li>
             <strong>Plot:</strong>
-            {{movie.Plot }}
+            {{ movie.Plot }}
           </li>
           <li>
             <strong>Director:</strong>
