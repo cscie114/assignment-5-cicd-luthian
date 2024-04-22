@@ -7,6 +7,6 @@ etc
 # Eleventy Edge Build Data files
 netlify/edge-functions/_generated
 # Eleventy Serverless files
-netlify/functions/getNasaImage/**
-!netlify/functions/getNasaImage/index.js
+netlify/functions/nasa/**
+!netlify/functions/nasa/index.js
 /.vscode

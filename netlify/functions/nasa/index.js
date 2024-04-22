@@ -5,7 +5,7 @@ const { EleventyServerless } = require("@11ty/eleventy");
 require("./eleventy-bundler-modules.js");
 
 async function handler(event) {
-  let elev = new EleventyServerless("getNasaImage", {
+  let elev = new EleventyServerless("nasa", {
     path: new URL(event.rawUrl).pathname,
     query: event.multiValueQueryStringParameters || event.queryStringParameters,
     functionsDir: "./netlify/functions/",
