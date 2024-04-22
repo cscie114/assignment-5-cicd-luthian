@@ -28,6 +28,7 @@ layout: 'layouts/base.html'
             A photo from {{ photo.rover.name }}'s {{ photo.camera.full_name}} on Mars on sol {{ photo.sol }}
           </h4>
           <div class="subtitle">Earth date {{ photo.earth_date}}, this day in 2021</div>
+          <img loading="lazy" class="pix" src="{{ photo.img_src}}" alt="Photo of Mars" />
         </div>
       </div>
       {% endedge %}
