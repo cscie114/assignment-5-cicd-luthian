@@ -16,9 +16,8 @@ export default async (request, context) => {
       // Add some custom Edge-specific configuration
       // e.g. Fancier json output
       eleventyConfig.addFilter('json', obj => JSON.stringify(obj, null, 2));
-      // Make geo and photo data available globally
+      // Make geo data available globally
       eleventyConfig.addGlobalData('geo', context.geo);
-      eleventyConfig.addGlobalData('photo', onePhoto);
     });
 
     // console.log(context.geo);

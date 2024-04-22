@@ -8,8 +8,8 @@ module.exports = function (config) {
     redirects: "netlify-toml",
 	});
 
-  config.addFilter("getNasaImage", function (date) {
-    return `${date} is the date`;
+  config.addFilter("getNasaImage", function (eleventy) {
+    return `${eleventy} is the object from the Eleventy template.`;
   });
   config.addPassthroughCopy('src/js');
   config.addPassthroughCopy('src/css');

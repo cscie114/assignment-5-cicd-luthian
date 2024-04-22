@@ -26,7 +26,7 @@ permalink:
           <h3>Your location is {{ geo.city }}, {{ geo.subdivision.code }}</h3>
         {% endedge %}
         <div class="chunk">
-          {% assign photo = eleventy.date | getNasaImage %}
+          {% assign photo = eleventy | getNasaImage %}
           <h4 class="title">
             A photo from {{ photo.rover.name }}'s {{ photo.camera.full_name }} on Mars on sol {{ photo.sol }}
           </h4>
