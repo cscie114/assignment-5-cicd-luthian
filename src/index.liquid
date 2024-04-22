@@ -24,18 +24,19 @@ permalink:
       <div>Serverless
         {% edge "liquid" %}
           <h3>Your location is {{ geo.city }}, {{ geo.subdivision.code }}</h3>
-          <div class="chunk">
-            <h4 class="title">
-              A photo from {{ photo.rover.name }}'s {{ photo.camera.full_name }} on Mars on sol {{ photo.sol }}
-            </h4>
-            <div class="subtitle">Earth date {{ photo.earth_date }}, this day in 2021</div>
-            <img
-              class="pix"
-              src="{{ photo.img_src}}"
-              alt="Photo of Mars" />
-          </div>
+        {% endedge %}
+        <div class="chunk">
+          {% assign photo = eleventy.date | getNasaImage %}
+          <h4 class="title">
+            A photo from {{ photo.rover.name }}'s {{ photo.camera.full_name }} on Mars on sol {{ photo.sol }}
+          </h4>
+          <div class="subtitle">Earth date {{ photo.earth_date }}, this day in 2021</div>
+          <img
+            class="pix"
+            src="{{ photo.img_src}}"
+            alt="Photo of Mars" />
         </div>
-      {% endedge %}
+      </div>
     </section>
     <section id="myMovie">
       <h3>Here's some information about one of my favorite movies:</h3>
