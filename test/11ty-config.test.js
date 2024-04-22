@@ -2,7 +2,7 @@ const eleventyConfig = require('../eleventy.config.js');
 
 test('Check input and output directories in 11ty config', () => {
   // Mock out the 11ty config object
-  const config = {addPassthroughCopy: jest.fn(), addPlugin: jest.fn()};
+  const config = {addPassthroughCopy: jest.fn(), addPlugin: jest.fn(), addFilter: jest.fn()};
   // Call the function from eleventy.config.js
   const result = eleventyConfig(config)
   // Check the return values
