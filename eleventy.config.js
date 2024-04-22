@@ -8,7 +8,7 @@ module.exports = function (config) {
     redirects: "netlify-toml",
 	});
 
-  config.addFilter("getResults", function (date) {
+  config.addFilter("getNasaImage", function (date) {
     return `${date} is the date`;
   });
   config.addPassthroughCopy('src/js');
