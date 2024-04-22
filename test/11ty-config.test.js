@@ -13,5 +13,5 @@ test('Check input and output directories in 11ty config', () => {
   expect(config.addPassthroughCopy.mock.calls[1][0]).toBe('src/css');
   expect(config.addPassthroughCopy).toHaveBeenCalledTimes(2);
   // Make sure the addPlugin function was called properly
-  expect(config.addPlugin).toHaveBeenCalledTimes(1);
+  expect(config.addPlugin).toHaveBeenCalledTimes(2);
 });
