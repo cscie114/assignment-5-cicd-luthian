@@ -32,11 +32,11 @@ export default async (request, context) => {
       // Add some custom Edge-specific configuration
       // e.g. Fancier json output
       eleventyConfig.addFilter('json', obj => JSON.stringify(obj, null, 2));
-      eleventyConfig.addFilter('getNasaImage', async date => {
+      eleventyConfig.addFilter('getNasaImage', async (eleventy) => {
+        console.log('eleventy', eleventy);
         // Get Mars Curiousity Rover image info for this day in 2021 ans save in global data
         // Since the rover stopped sending images, we will use the date to get the image
-        console.log('date', date);
-        const year2021 = new Date(date);
+        const year2021 = new Date();
         year2021.setFullYear(2021);
         const today = year2021.toISOString().split('T')[0]; // YYYY-MM-DD;
 
