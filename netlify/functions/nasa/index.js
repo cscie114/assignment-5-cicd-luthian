@@ -13,6 +13,7 @@ async function handler(event) {
 
   try {
     let [page] = await elev.getOutput();
+    console.log("page", page);
 
     // If you want some of the data cascade available in `page.data`, use `eleventyConfig.dataFilterSelectors`.
     // Read more: https://www.11ty.dev/docs/config/#data-filter-selectors
