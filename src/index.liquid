@@ -1,0 +1,72 @@
+---
+title: 'Hello, Netlify!'
+layout: 'layouts/base.html'
+permalink:
+  nasa: /
+---
+
+<header>
+  <h1>Hello, Netlify!</h1>
+</header>
+
+<main>
+  <h2>My name is David D'Antonio.</h2>
+
+  <section class="two-column">
+    <section id="funFacts">
+      <h3>Two fun facts about myself are:</h3>
+
+      <ul>
+        <li>My license plate is CSS. HTML was taken.</li>
+        <li>I've driven cars with four different engine types.</li>
+      </ul>
+      <hr/>
+      <div>
+        {% edge "liquid" %}
+          <h3>Your location is {{ geo.city }}, {{ geo.subdivision.code }}</h3>
+        {% endedge %}
+        <div class="chunk">
+          {% assign photo = eleventy | getNasaImage %}
+          <h4 class="title">
+            A photo from {{ photo.rover.name }}'s {{ photo.camera.full_name }} on Mars on sol {{ photo.sol }}
+          </h4>
+          <div class="subtitle">Earth date {{ photo.earth_date }}, this day in 2021</div>
+          <img
+            class="pix"
+            src="{{ photo.img_src}}"
+            alt="Photo of Mars" />
+        </div>
+      </div>
+    </section>
+    <section id="myMovie">
+      <h3>Here's some information about one of my favorite movies:</h3>
+      <div class="two-column">
+        <div id="myMoviePoster">
+          <img src="{{ movie.Poster }}" alt="{{ movie.Title }}" />
+        </div>
+        <ul>
+          <li>
+            <strong>Title:</strong>
+            {{ movie.Title }}
+          </li>
+          <li>
+            <strong>Plot:</strong>
+            {{ movie.Plot }}
+          </li>
+          <li>
+            <strong>Director:</strong>
+            {{ movie.Director }}
+          </li>
+          <li>
+            <strong>Year:</strong>
+            {{ movie.Year }}
+          </li>
+        </ul>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer>
+  This web page is my submission for the fifth assignment of "CSCI E-114: Web Application Development With Jamstack."
+</footer>
