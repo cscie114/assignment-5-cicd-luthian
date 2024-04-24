@@ -3,7 +3,7 @@ import { EleventyEdge, precompiledAppData } from './_generated/eleventy-edge-app
 export default async (request, context) => {
   try {
 
-    const today = new Date().toLocaleString('en-US', { timeZone: 'America/New_York' });
+    const today = new Date().toLocaleString();
     console.log('Today is', today);
 
     context.geo.today = today;
