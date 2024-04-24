@@ -14,4 +14,7 @@ test('Check input and output directories in 11ty config', () => {
   expect(config.addPassthroughCopy).toHaveBeenCalledTimes(2);
   // Make sure the addPlugin function was called properly
   expect(config.addPlugin).toHaveBeenCalledTimes(2);
+  // Make sure the addFilter function was called properly
+  expect(config.addFilter.mock.calls[0][0]).toBe('getNasaImage');
+  expect(config.addFilter).toHaveBeenCalledTimes(1);
 });
