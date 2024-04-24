@@ -23,7 +23,7 @@ permalink:
       <hr/>
       <div>
         {% edge "liquid" %}
-          <h3>Your location is {{ geo.city }}, {{ geo.subdivision.code }}</h3>
+          <h3>Your location is {{ geo.city }}, {{ geo.subdivision.code }} on {{ photo.today }}</h3>
           <div class="chunk">
             <h4 class="title">
               A photo from {{ photo.rover.name }}'s {{ photo.camera.full_name }} on Mars on sol {{ photo.sol }}
