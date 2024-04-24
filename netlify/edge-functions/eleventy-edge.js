@@ -1,6 +1,6 @@
 import { EleventyEdge, precompiledAppData } from './_generated/eleventy-edge-app.js';
 import { fetch } from 'node-fetch';
-import '../../src/env.js';
+// import '../../src/env.js';
 
 export default async (request, context) => {
   try {
