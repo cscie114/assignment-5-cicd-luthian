@@ -2,6 +2,12 @@ import { EleventyEdge, precompiledAppData } from './_generated/eleventy-edge-app
 
 export default async (request, context) => {
   try {
+
+    const today = new Date().toLocaleString('en-US', { timeZone: 'America/New_York' });
+    console.log('Today is', today);
+
+    context.geo.today = today;
+
     let edge = new EleventyEdge('edge', {
       request,
       context,
