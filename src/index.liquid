@@ -24,17 +24,16 @@ permalink:
       <div>
         {% edge "liquid" %}
           <h3>Your location is {{ geo.city }}, {{ geo.subdivision.code }}</h3>
-        {% endedge %}
-        <div class="chunk">
-          {% assign photo = eleventy | getNasaImage %}
-          <h4 class="title">
-            A photo from {{ photo.rover.name }}'s {{ photo.camera.full_name }} on Mars on sol {{ photo.sol }}
-          </h4>
-          <div class="subtitle">Earth date {{ photo.earth_date }} UTC, this day in 2021</div>
-          <img
-            class="pix"
-            src="{{ photo.img_src}}"
-            alt="Photo of Mars" />
+          <div class="chunk">
+            <h4 class="title">
+              A photo from {{ photo.rover.name }}'s {{ photo.camera.full_name }} on Mars on sol {{ photo.sol }}
+            </h4>
+            <div class="subtitle">Earth date {{ photo.earth_date }} UTC, this day in 2021</div>
+            <img
+              class="pix"
+              src="{{ photo.img_src}}"
+              alt="Photo of Mars" />
+          {% endedge %}
         </div>
       </div>
     </section>
