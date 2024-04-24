@@ -1,5 +1,4 @@
 import '../../src/env.js';
-import axios from 'axios';
 import { EleventyEdge, precompiledAppData } from './_generated/eleventy-edge-app.js';
 
 export default async (request, context) => {
