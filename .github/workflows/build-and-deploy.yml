@@ -64,4 +64,5 @@ jobs:
             --site ${{ secrets.NETLIFY_SITE_ID }} \
             --auth ${{ secrets.NETLIFY_ACCESS_TOKEN }} \
             --message "Deployed ${{ github.ref_name }} from GitHub Actions" \
+            --skip-functions-cache \
             --prod
