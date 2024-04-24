@@ -1,11 +1,11 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests
+# It will then deploy to Netlify
 
 name: Build and Deploy
 
 on:
   push:
-    # branches: ['main']
+    # branches: ['main'] run on any push
   pull_request:
     branches: ['main']
 
@@ -48,4 +48,5 @@ jobs:
             --dir dist \
             --site ${{ secrets.NETLIFY_SITE_ID }} \
             --auth ${{ secrets.NETLIFY_ACCESS_TOKEN }} \
+            --message "Deployed ${{ github.ref_name }} from GitHub Actions" \
             --prod
