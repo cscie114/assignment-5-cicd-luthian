@@ -59,10 +59,12 @@ jobs:
       - run: echo "Deploying to Netlify..."
       - name: Deploy to Netlify using CLI
         run: |
+          prod_flag=""
+          if [ "$BRANCH_NAME" = "main" ]; then prod_flag="--prod"; fi
           npx netlify deploy \
             --dir dist \
             --site ${{ secrets.NETLIFY_SITE_ID }} \
             --auth ${{ secrets.NETLIFY_ACCESS_TOKEN }} \
             --message "Deployed ${{ github.ref_name }} from GitHub Actions" \
             --skip-functions-cache \
-            --prod
+            $prod_flag
