@@ -21,7 +21,7 @@ export default async (request, context) => {
     });
 
     const data = await response.json();
-    console.log('data', data);
+    // console.log('data', data);
 
     const onePhoto = data.photos[0];
     onePhoto.today = new Date().toLocaleString();
