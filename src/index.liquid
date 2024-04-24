@@ -23,7 +23,7 @@ permalink:
       <hr/>
       <div>
         {% edge "liquid" %}
-          <h3>Your location is {{ geo.city }}, {{ geo.subdivision.code }}</h3>
+          <h3>Your location is {{ geo.city }}, {{ geo.subdivision.code }} on {{ geo.today }} UTC</h3>
         {% endedge %}
         <div class="chunk">
           {% assign photo = eleventy | getNasaImage %}

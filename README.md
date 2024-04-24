@@ -55,3 +55,6 @@ Finally...
 
 * To actually deploy the site to Netlify, go to the GitHub page for this repo and click on **Actions** in the menu list. Select the **Build and Deploy** workflow and click the **Run Workflow** button. Follow the directions and the action should run and build and deploy the site to Netlify.
 * You can monitor the workflow from that page. When the build is finished, go to Netlify and open your site.
+
+My Netlify site is at https://rad-sable-6a1d2d.netlify.app/
+
