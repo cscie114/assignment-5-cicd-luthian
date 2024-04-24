@@ -7,7 +7,7 @@
 
 This is my submission for Assignment 5. The project implements a variant of the first assignment which displayed a poster and some data about a specific movie. It used the **omdbapi.com** site to retrieve that data and was built in the static site generator, [Eleventy](https://www.11ty.dev/]).
 
-To this, I've added a serverless function hosted on Netlify, as is the site itself. The serverless function returns information on the Mars Curiousity Rover for today date (UTC) in 2021.
+To this, I've added both an edge and a serverless function hosted on Netlify, as is the site itself. The edge function just returns some geolocation information provided by the edge server itself and the serverless function returns information on the Mars Curiousity Rover for today date (UTC) in 2021.
 
 Please follow the steps below to build and view this website.
 
