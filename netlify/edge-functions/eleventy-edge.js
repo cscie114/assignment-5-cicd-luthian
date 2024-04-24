@@ -1,5 +1,3 @@
-import '../../src/env.js';
-import axios from 'axios';
 import { EleventyEdge, precompiledAppData } from './_generated/eleventy-edge-app.js';
 
 export default async (request, context) => {
@@ -19,8 +17,6 @@ export default async (request, context) => {
       // Make geo data available globally
       eleventyConfig.addGlobalData('geo', context.geo);
     });
-
-    // console.log(context.geo);
 
     return await edge.handleResponse();
   } catch (e) {
